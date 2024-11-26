@@ -36,11 +36,19 @@
 
 * {
 	box-sizing: border-box;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {
 	margin: 0;
 	color: var(--gray3);
+}
+
+h1.title {
+	font-size: 50px;
+}
+.title {
+	text-align: center;
 }
 
 h1,
@@ -215,8 +223,9 @@ input:focus {
 
 
 a.active {
-	color: rgb(241, 212, 241);
-	font-weight: 600;
+	color: rgb(162, 221, 175);
+	font-weight: 800;
+	font-style: oblique;
 	text-decoration: underline;
 }
 
