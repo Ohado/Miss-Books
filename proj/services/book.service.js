@@ -1,19 +1,10 @@
 import { utilService } from './util.service.js'
 import { storageService } from './async-storage.service.js'
 
+const MAX_PRICE = 200
 const BOOK_KEY = 'bookDB'
-_createBooks()
-
-export const bookService = {
-    query,
-    get,
-    remove,
-    save,
-    getEmptyBook,
-    getDefaultFilter,
-}
-
 const smapleBooks = [
+    {},
     {title: "Gwent", description: "A thrilling dive into the world of competitive card games, where strategy, deception, and luck collide in the high-stakes tournaments of a post-apocalyptic future."},
     {title: "Between Here and Gone", description: "A soul-searching journey that follows a young woman as she navigates the complexities of life, love, and loss, while trying to find her way back to the life she left behind."},
     {title: "Magic Lantern", description: "A historical mystery about an antique projector that reveals forgotten memories, unlocking secrets from the past that change the course of a family’s future."},
@@ -36,19 +27,32 @@ const smapleBooks = [
     {title: "Akarnae", description: "In this captivating fantasy novel, a young girl discovers she is the heir to a forgotten kingdom, but to claim her throne, she must first navigate deadly trials and face powerful enemies."}
 ]
 
+_createBooks()
+
+export const bookService = {
+    query,
+    get,
+    remove,
+    save,
+    getEmptyBook,
+    getDefaultFilter,
+}
+
+
 // For Debug (easy access from console):
 // window.cs = bookService
 
 function query(filterBy = {}) {
     return storageService.query(BOOK_KEY)
         .then(books => {
+            
             if (filterBy.txt) {
                 const regExp = new RegExp(filterBy.txt, 'i')
-                books = books.filter(book => regExp.test(book.title))+books.filter(book => regExp.test(book.description))
+                books = books.filter(book => regExp.test(book.title))
             }
 
             if (filterBy.maxPrice) {
-                books = books.filter(book => book.price <= filterBy.maxPrice)
+                books = books.filter(book => book.listPrice.amount <= filterBy.maxPrice)
             }
 
             return books
@@ -72,10 +76,10 @@ function save(book) {
 }
 
 function getEmptyBook(title = '', description = '',thumbnail='', price = 0, currencyCode='', isOnSale=false) {
-    return { title, description, thumbnail, listPrice: {price, currencyCode, isOnSale} }
+    return { title, description, thumbnail, listPrice: {amount:price, currencyCode, isOnSale} }
 }
 
-function getDefaultFilter(filterBy = { txt: '', maxPrice: 0 }) {
+function getDefaultFilter(filterBy = { txt: '', maxPrice: MAX_PRICE }) {
     return { txt: filterBy.txt, maxPrice: filterBy.maxPrice }
 }
 
@@ -84,9 +88,9 @@ function _createBooks() {
     if (!books || !books.length) {
         books = []
         for (let i = 0; i < 3; i++) {
-            let idx = utilService.getRandomIntInclusive(0, smapleBooks.length - 1)
+            let idx = utilService.getRandomIntInclusive(1, smapleBooks.length - 1)
             const bookDesc = smapleBooks[idx]
-            books.push(_createBook(bookDesc.title, bookDesc.description, "../img/booksImages/"+idx+".jpg", utilService.getRandomIntInclusive(5, 200)))
+            books.push(_createBook(bookDesc.title, bookDesc.description, "./assets/img/booksImages/"+idx+".jpg", utilService.getRandomIntInclusive(5, MAX_PRICE)))
         }
         utilService.saveToStorage(BOOK_KEY, books)
     }

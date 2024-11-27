@@ -42,6 +42,7 @@
 body {
 	margin: 0;
 	color: var(--gray3);
+	font-size: x-small;
 }
 
 h1.title {
@@ -97,7 +98,8 @@ button {
 	margin: 0.5em;
 	border: 0;
 	padding: 0.5em 0.8em;
-	border-radius: 4px;
+	border-radius: 4px;	
+	font-size: x-small;
 }
 
 button:hover {
@@ -130,6 +132,9 @@ input:focus {
 
 .flex.justify-between {
 	justify-content: space-between;
+}
+.flex.justify-around {
+	justify-content: space-around;
 }
 
 .flex.align-center {
@@ -234,4 +239,67 @@ a.active {
 	.app-header {
 		color: var(--clr2bg-light);
 	}
+}
+
+.book-list {
+	list-style-type: none;
+	flex-wrap: wrap;
+	justify-items: center;
+	gap: 6px;
+	padding: 0;
+}
+
+.book-list li {
+	flex: 30%;
+	text-align: center;
+	background-color: var(--clr1bg);
+}
+
+.book-preview {
+	font-size: x-small;
+}
+
+.book-preview h3 {
+	font-size: large;
+	text-align: center;
+}
+
+.price {
+	text-align: center;
+}
+
+.link {
+	text-decoration: double;
+	color: darkblue;
+	background-color: var(--clr2bg);
+	cursor: pointer;
+	text-align: right;
+}
+
+.book-details {
+	text-align: center;
+}
+
+.book-details img {
+	height: 150px;
+}
+
+.filter {
+	background-color: var(--clr1bg-light);
+	padding: 15px;
+	width: 50%;
+	border-radius: 15px;
+}
+
+.filter form {
+	display: flex;
+	flex-direction: column;
+}
+
+.filter form label {
+	margin-top: 5px;
+}
+
+.filter button {
+	background-color: var(--clr1bg);
 }
