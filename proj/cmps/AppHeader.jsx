@@ -9,7 +9,7 @@ export function AppHeader() {
                 <nav className="app-nav">
                     <NavLink to="home">Home</NavLink>
                     <NavLink to="about">About Us</NavLink>
-                    <NavLink to="index">Book Index</NavLink>
+                    <NavLink to="book">Book Index</NavLink>
                 </nav>
             </section>
         </header>

@@ -2,7 +2,7 @@ const { useState, useEffect } = React
 
 export function AboutUs() {
     return (
-        <section className="home">
+        <section className="about">
             <h1 className="title">Miss Books</h1>
             <p>
                 At Miss Books, we're passionate about books and the joy of reading. 
