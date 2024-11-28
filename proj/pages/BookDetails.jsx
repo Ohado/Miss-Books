@@ -1,5 +1,5 @@
 const { useState, useEffect } = React
-const { useParams, useNavigate } = ReactRouterDOM
+const { useParams, useNavigate, Link } = ReactRouterDOM
 
 import { bookService } from "../services/book.service.js"
 
@@ -49,14 +49,18 @@ export function BookDetails() {
             <div className={"price "+ priceRating}>{amount} {currencyCode}</div>
             <hr />
             {isOnSale ?
-                <div class='sale-banner'>
+                <div className='sale-banner'>
                     <img height='22px' src='./assets/img/onSale.png' />
                 </div>  : '' }
             <img src={book.thumbnail} alt="book cover" />
             <br />
             {book.description}
             <br />
-            <button onClick={onBack}>Back</button>
+            <div className="bottom-buttons">
+                <button><Link to={`/book/${book.nextBookId}`}>Previous Book</Link></button>
+                <button onClick={onBack}>Back</button>
+                <button><Link to={`/book/${book.nextBookId}`}>Next Book</Link></button>
+            </div>
        </section>
     )
 }

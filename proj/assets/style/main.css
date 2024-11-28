@@ -307,6 +307,11 @@ a.active {
 	font-weight: 600;
 }
 
+.book-details .bottom-buttons {
+	display: flex;
+	justify-content: space-around;
+}
+
 .filter {
 	background-color: var(--clr1bg-light);
 	padding: 15px;
@@ -325,4 +330,9 @@ a.active {
 
 .filter button {
 	background-color: var(--clr1bg);
+}
+
+.long-txt a {
+	color: blue;
+	text-decoration-line: underline;	
 }
