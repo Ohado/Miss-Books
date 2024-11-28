@@ -267,6 +267,24 @@ a.active {
 .price {
 	text-align: center;
 }
+.price.expansive {
+	color: red;
+}
+.price.cheap {
+	color: green;
+}
+
+.sale-banner {
+	position: absolute;
+	display: inline-block;
+}
+.sale-banner img{
+	position: relative;
+	display: block;
+	width: 60px;
+	height: auto;
+	left: 90%;
+}
 
 .link {
 	text-decoration: double;
@@ -280,8 +298,13 @@ a.active {
 	text-align: center;
 }
 
-.book-details img {
+.book-details>img {
 	height: 150px;
+}
+
+.book-details .detail-tag {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: 600;
 }
 
 .filter {

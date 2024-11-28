@@ -1,8 +1,10 @@
 import { utilService } from './util.service.js'
 import { storageService } from './async-storage.service.js'
+import { books } from '../../books.js'
 
 const MAX_PRICE = 200
 const BOOK_KEY = 'bookDB'
+const jsonBooks = books
 const smapleBooks = [
     {},
     {title: "Gwent", description: "A thrilling dive into the world of competitive card games, where strategy, deception, and luck collide in the high-stakes tournaments of a post-apocalyptic future."},
@@ -86,12 +88,13 @@ function getDefaultFilter(filterBy = { txt: '', maxPrice: MAX_PRICE }) {
 function _createBooks() {
     let books = utilService.loadFromStorage(BOOK_KEY)
     if (!books || !books.length) {
-        books = []
-        for (let i = 0; i < 3; i++) {
-            let idx = utilService.getRandomIntInclusive(1, smapleBooks.length - 1)
-            const bookDesc = smapleBooks[idx]
-            books.push(_createBook(bookDesc.title, bookDesc.description, "./assets/img/booksImages/"+idx+".jpg", utilService.getRandomIntInclusive(5, MAX_PRICE)))
-        }
+        books = jsonBooks
+    //     books = []
+    //     for (let i = 0; i < 3; i++) {
+    //         let idx = utilService.getRandomIntInclusive(1, smapleBooks.length - 1)
+    //         const bookDesc = smapleBooks[idx]
+    //         books.push(_createBook(bookDesc.title, bookDesc.description, "./assets/img/booksImages/"+idx+".jpg", utilService.getRandomIntInclusive(5, MAX_PRICE)))
+    //     }
         utilService.saveToStorage(BOOK_KEY, books)
     }
 }

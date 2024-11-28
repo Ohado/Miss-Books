@@ -1,6 +1,6 @@
 
 
-const books = [
+export const books = [
   {
     "id": "OXeMG8wNskc",
     "title": "metus hendrerit",
@@ -15,7 +15,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/20.jpg",
+    "thumbnail": "assets/img/booksimages/20.jpg",
     "language": "en",
     "listPrice": {
       "amount": 109,
@@ -30,14 +30,14 @@ const books = [
     "authors": [
       "Barbara Cartland"
     ],
-    "publishedDate": 1978,
+    "publishedDate": 2024,
     "description": "aliquam pretium lorem laoreet etiam odio cubilia iaculis placerat aliquam tempor nisl auctor",
     "pageCount": 129,
     "categories": [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/14.jpg",
+    "thumbnail": "assets/img/booksimages/14.jpg",
     "language": "sp",
     "listPrice": {
       "amount": 44,
@@ -59,7 +59,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/2.jpg",
+    "thumbnail": "assets/img/booksimages/2.jpg",
     "language": "he",
     "listPrice": {
       "amount": 108,
@@ -81,7 +81,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/16.jpg",
+    "thumbnail": "assets/img/booksimages/16.jpg",
     "language": "en",
     "listPrice": {
       "amount": 30,
@@ -103,7 +103,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/12.jpg",
+    "thumbnail": "assets/img/booksimages/12.jpg",
     "language": "sp",
     "listPrice": {
       "amount": 19,
@@ -125,7 +125,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/1.jpg",
+    "thumbnail": "assets/img/booksimages/1.jpg",
     "language": "en",
     "listPrice": {
       "amount": 91,
@@ -147,7 +147,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/14.jpg",
+    "thumbnail": "assets/img/booksimages/14.jpg",
     "language": "he",
     "listPrice": {
       "amount": 90,
@@ -169,7 +169,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/11.jpg",
+    "thumbnail": "assets/img/booksimages/11.jpg",
     "language": "he",
     "listPrice": {
       "amount": 176,
@@ -191,7 +191,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/10.jpg",
+    "thumbnail": "assets/img/booksimages/10.jpg",
     "language": "sp",
     "listPrice": {
       "amount": 116,
@@ -206,14 +206,14 @@ const books = [
     "authors": [
       "Dr. Seuss"
     ],
-    "publishedDate": 1978,
+    "publishedDate": 2024,
     "description": "curabitur bibendum in dolor neque magna phasellus arcu nulla cubilia senectus maecenas ullamcorper neque accumsan facilisis dictumst ornare",
     "pageCount": 891,
     "categories": [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/5.jpg",
+    "thumbnail": "assets/img/booksimages/5.jpg",
     "language": "en",
     "listPrice": {
       "amount": 145,
@@ -235,7 +235,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/16.jpg",
+    "thumbnail": "assets/img/booksimages/16.jpg",
     "language": "sp",
     "listPrice": {
       "amount": 157,
@@ -257,7 +257,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/17.jpg",
+    "thumbnail": "assets/img/booksimages/17.jpg",
     "language": "sp",
     "listPrice": {
       "amount": 57,
@@ -279,7 +279,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/8.jpg",
+    "thumbnail": "assets/img/booksimages/8.jpg",
     "language": "en",
     "listPrice": {
       "amount": 167,
@@ -301,7 +301,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/3.jpg",
+    "thumbnail": "assets/img/booksimages/3.jpg",
     "language": "he",
     "listPrice": {
       "amount": 150,
@@ -323,7 +323,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/6.jpg",
+    "thumbnail": "assets/img/booksimages/6.jpg",
     "language": "en",
     "listPrice": {
       "amount": 58,
@@ -345,7 +345,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/7.jpg",
+    "thumbnail": "assets/img/booksimages/7.jpg",
     "language": "en",
     "listPrice": {
       "amount": 78,
@@ -367,7 +367,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/10.jpg",
+    "thumbnail": "assets/img/booksimages/10.jpg",
     "language": "en",
     "listPrice": {
       "amount": 118,
@@ -389,7 +389,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/12.jpg",
+    "thumbnail": "assets/img/booksimages/12.jpg",
     "language": "he",
     "listPrice": {
       "amount": 60,
@@ -411,7 +411,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/20.jpg",
+    "thumbnail": "assets/img/booksimages/20.jpg",
     "language": "he",
     "listPrice": {
       "amount": 110,
@@ -433,7 +433,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/2.jpg",
+    "thumbnail": "assets/img/booksimages/2.jpg",
     "language": "sp",
     "listPrice": {
       "amount": 186,

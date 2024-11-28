@@ -24,15 +24,34 @@ export function BookDetails() {
 
     if(!book) return <div>Loading your book...</div>
 
-    const { id, title, description, thumbnail, listPrice } = book
+    const { id, title, subtitle, authors, publishedDate, description, 
+        pageCount, categories, thumbnail, language, listPrice } = book
     const { amount, currencyCode, isOnSale } = listPrice
+    
+    const lengthRating = pageCount > 500 ? "Serious Reading"
+        : pageCount > 200 ? "Descent Reading"
+        : pageCount < 100 ? "Light Reading" 
+        : ""
+    const currentYear = new Date().getFullYear()
+    const yearRating = currentYear - publishedDate > 10 ? "Vintage" 
+        : currentYear - publishedDate < 1 ? "New" 
+        : ""
+    const priceRating = amount > 150 ? "expansive" 
+        : amount < 20 ? "cheap" 
+        : ""
 
     return (
         <section className="book-details">
             <h2 className="title">{title}</h2>
             <hr />
-            <div className="price">{amount} {currencyCode}</div>
+            <div className="detail-tag">{lengthRating}</div>
+            <div className="detail-tag">{yearRating}</div>
+            <div className={"price "+ priceRating}>{amount} {currencyCode}</div>
             <hr />
+            {isOnSale ?
+                <div class='sale-banner'>
+                    <img height='22px' src='./assets/img/onSale.png' />
+                </div>  : '' }
             <img src={book.thumbnail} alt="book cover" />
             <br />
             {book.description}
