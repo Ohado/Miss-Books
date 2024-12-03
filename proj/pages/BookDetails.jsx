@@ -13,6 +13,9 @@ export function BookDetails() {
     }, [params.bookId])
 
     function loadBook() {
+        console.log('f');
+        console.log(params.bookId);
+        
         bookService.get(params.bookId)
         .then(setBook)
         .catch(err => {console.log("Problem getting book", err)})
@@ -57,7 +60,7 @@ export function BookDetails() {
             {book.description}
             <br />
             <div className="bottom-buttons">
-                <button><Link to={`/book/${book.nextBookId}`}>Previous Book</Link></button>
+                <button><Link to={`/book/${book.prevBookId}`}>Previous Book</Link></button>
                 <button onClick={onBack}>Back</button>
                 <button><Link to={`/book/${book.nextBookId}`}>Next Book</Link></button>
             </div>

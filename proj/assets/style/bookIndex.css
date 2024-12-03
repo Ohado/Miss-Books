@@ -1,0 +1,146 @@
+.book-index {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+}
+
+.book-index>button {
+	align-self: center;
+	padding-inline: 5rem;
+	padding-block: 1rem;
+	font-size: small;
+}
+
+/***** book list *****/
+.book-list {
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 5px;
+	list-style-type: none;
+}
+
+.book-list li {
+	border-radius: 15px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: center;
+	background-color: var(--clr1bg);
+}
+
+/***** book preview *****/
+.book-preview {
+	display: grid;
+	font-size: x-small;
+}
+
+.book-preview h3 {
+	font-size: large;
+	text-align: center;
+}
+
+.book-preview h4 {
+	margin-top: -0.3em;
+}
+
+.price {
+	text-align: center;
+}
+.price.expansive {
+	color: red;
+}
+.price.cheap {
+	color: green;
+}
+
+.sale-banner {
+	position: absolute;
+	display: inline-block;
+}
+.sale-banner img{
+	position: relative;
+	display: block;
+	width: 60px;
+	height: auto;
+	left: 90%;
+}
+
+.link {
+	text-decoration: double;
+	color: darkblue;
+	background-color: var(--clr2bg);
+	cursor: pointer;
+	text-align: right;
+}
+
+/***** book details ****/
+.book-details {
+	text-align: center;
+}
+
+.book-details>img {
+	height: 150px;
+}
+
+.book-details .detail-tag {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: 600;
+}
+
+.book-details .bottom-buttons {
+	display: flex;
+	justify-content: space-around;
+}
+
+/***** filter ******/
+
+.filter {
+	width: 50%;
+}
+
+.filter h2 {
+	font-size: large;
+}
+
+.filter form {
+	display: flex;
+	flex-direction: column;
+}
+
+.filter form label {
+	margin-top: 5px;
+}
+
+.filter button {
+	background-color: var(--clr1bg);
+}
+
+/****** long txt and collaped el ******/
+
+.long-txt a {
+	color: blue;
+	text-decoration-line: underline;	
+}
+
+
+.collapsed-el {
+	background-color: var(--clr1bg-light);
+	width: 50%;
+	border-radius: 15px;
+}
+
+.collapsed-el > * {
+	padding-left: 15px;
+}
+
+.collapsed-el .coll-button {
+	all: unset;
+	padding: 15px;
+	width: 100% ;
+	cursor: pointer;
+}
+
+.collapse-header {
+	display: flex;
+	justify-content: space-around;
+}

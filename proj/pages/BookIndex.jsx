@@ -1,8 +1,9 @@
 const { useState, useEffect } = React
+const { Link } = ReactRouterDOM
 import { bookService } from "../services/book.service.js"
 import { BookList } from "../cmps/BookList.jsx"
 import { BookFilter } from "../cmps/BookFilter.jsx"
-import { LongTxt } from "../cmps/LongTxt.jsx"
+import { CollapsedEl } from "../cmps/CollapsedEl.jsx"
 
 export function BookIndex() {
     const [books, setBooks] = useState([])
@@ -23,7 +24,10 @@ export function BookIndex() {
     return (
         <section className="book-index">
             <h2 className="title">Your index</h2>
-            <BookFilter defaultFilter={filter} onSetFilter={onSetFilter}/>
+            <CollapsedEl
+                colState={<section className="filter"><h2 >Filter</h2></section>}
+                extState={<BookFilter defaultFilter={filter} onSetFilter={onSetFilter}/>} />
+            <button><Link to={`/book/edit`}>Add Book</Link></button>
             <BookList books={books}/>
        </section>
     )
@@ -35,4 +39,6 @@ Bonuses todo:
 Start with a simple form which has inputs for a title and a price and hard
 code the rest of the data.
 2. Refactor the <BookFilter> component to add more filtering options.
+4. More edit options
+4. More information shown in both list and details
 */

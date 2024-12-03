@@ -1,3 +1,5 @@
+import { LongTxt } from "./LongTxt.jsx"
+
 const { useState, useEffect } = React
 
 export function BookPreview({ book }) {
@@ -6,15 +8,21 @@ export function BookPreview({ book }) {
         
     }, [])
 
-    const { id, title, description, thumbnail, listPrice } = book
+    const { id, title, subtitle, authors, publishedDate, description, 
+        pageCount, categories, thumbnail, language, listPrice } = book
     const { amount, currencyCode, isOnSale } = listPrice
+    const priceRating = amount > 150 ? "expansive" 
+    : amount < 20 ? "cheap" 
+    : ""
 
     return (
-        <article className="book-preview flex flex-column">
+        <article className="book-preview">
             <h3>{title}</h3>
-            <div className="price">{amount} {currencyCode}</div>
+            <h4>{authors}</h4>
+            <div className={"price "+ priceRating}>{amount} {currencyCode}</div>
             <hr />
             <img src={thumbnail} alt="book cover" />
+            {subtitle ? <LongTxt txt={subtitle} length={20} > {subtitle} </LongTxt> : ''}
         </article>
     )
 }

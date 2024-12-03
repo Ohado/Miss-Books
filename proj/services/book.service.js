@@ -1,6 +1,7 @@
 import { utilService } from './util.service.js'
 import { storageService } from './async-storage.service.js'
-import { books } from '../../books.js'
+// import { books } from '../../books.js'
+import { books } from '../../books-better.js'
 
 const MAX_PRICE = 200
 const BOOK_KEY = 'bookDB'
@@ -54,6 +55,7 @@ function query(filterBy = {}) {
             }
 
             if (filterBy.maxPrice) {
+                console.log(books)
                 books = books.filter(book => book.listPrice.amount <= filterBy.maxPrice)
             }
 
@@ -78,8 +80,8 @@ function save(book) {
     }
 }
 
-function getEmptyBook(title = '', description = '',thumbnail='', price = 0, currencyCode='', isOnSale=false) {
-    return { title, description, thumbnail, listPrice: {amount:price, currencyCode, isOnSale} }
+function getEmptyBook(title = '', authors=[], description = '', publishedDate=0, pageCount=0,thumbnail='', price = 0, currencyCode='', isOnSale=false) {
+    return { title, authors, description, publishedDate, pageCount, thumbnail, listPrice: {amount:price, currencyCode, isOnSale} }
 }
 
 function getDefaultFilter(filterBy = { txt: '', maxPrice: MAX_PRICE }) {

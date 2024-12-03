@@ -15,13 +15,13 @@ export function LongTxt({ txt, length=100 }) {
         <div className="long-txt">
             {isExtended ?
                 <p>
-                    {txt.substring(0, length)}
-                    ...<a onClick={onExtendChange}>read more</a>
+                    {txt}
+                    {' '}<a onClick={onExtendChange}>read less</a>
                 </p>
                 :
                 <p>
-                    {txt}
-                    <a onClick={onExtendChange}>read less</a>
+                    {txt.substring(0, length)}
+                    ...<a onClick={onExtendChange}>read more</a>
                 </p>
             }
         </div>

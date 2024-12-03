@@ -21,12 +21,11 @@ export function BookFilter({defaultFilter, onSetFilter}) {
 
     return (
         <section className="filter">
-            <h2>Filter:</h2>
             <form onSubmit={onSubmitFilter}>
                 {/* <label htmlFor="txt"></label> */}
                 <input onChange={handleChange} value={filter.txt} type="text" name="txt" id="txt" />
-                <label htmlFor="price">Price up to: {filter.maxPrice}</label>
-                <input onChange={handleChange} type="range" defaultValue={filter.maxPrice} min={0} max={200} name="maxPrice" id="maxPrice" />
+                <label htmlFor="maxPrice">Price up to: {filter.maxPrice}</label>
+                <input onChange={handleChange} type="range" value={filter.maxPrice} min={0} max={200} name="maxPrice" id="maxPrice" />
                 <button>Filter</button>
             </form>
         </section>
