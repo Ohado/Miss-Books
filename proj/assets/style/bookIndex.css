@@ -8,7 +8,7 @@
 	align-self: center;
 	padding-inline: 5rem;
 	padding-block: 1rem;
-	font-size: small;
+	font-size: medium;
 }
 
 /***** book list *****/
@@ -31,11 +31,11 @@
 /***** book preview *****/
 .book-preview {
 	display: grid;
-	font-size: x-small;
+	font-size: small;
 }
 
 .book-preview h3 {
-	font-size: large;
+	font-size: x-large;
 	text-align: center;
 }
 
@@ -98,10 +98,6 @@
 	width: 50%;
 }
 
-.filter h2 {
-	font-size: large;
-}
-
 .filter form {
 	display: flex;
 	flex-direction: column;
@@ -138,9 +134,14 @@
 	padding: 15px;
 	width: 100% ;
 	cursor: pointer;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: end;
+	font-size: large;
+	/* display: inline; */
 }
 
-.collapse-header {
-	display: flex;
-	justify-content: space-around;
+
+.collapse-header h2 {
+	display: inline;
 }

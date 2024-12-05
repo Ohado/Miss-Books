@@ -1,6 +1,6 @@
 const { useState, useEffect } = React
 
-export function CollapsedEl({ colState, extState }) {
+export function CollapsedEl({ colHeader, ExtState }) {
     const [isExtended, setIsExtended] = useState(false)
 
     useEffect(() => {
@@ -14,13 +14,12 @@ export function CollapsedEl({ colState, extState }) {
     return (
         <div className="collapsed-el">
             <div className="collapse-header">
-                <button className="coll-button" onClick={onExtendChange}>{colState}</button>
-                {/* <div>▼</div> */}
+                <button className="coll-button" onClick={onExtendChange}>
+                    {colHeader}
+                    <span>▼</span>
+                </button>
             </div>
-            {isExtended ?
-                extState
-                :
-                ''
+            {isExtended &&  ExtState
             }
         </div>
     )

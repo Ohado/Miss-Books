@@ -3,10 +3,6 @@ const { useState, useEffect } = React
 export function LongTxt({ txt, length=100 }) {
     const [isExtended, setIsExtended] = useState(false)
 
-    useEffect(() => {
-        
-    }, [])
-
     function onExtendChange(){
         setIsExtended(!isExtended)
     }

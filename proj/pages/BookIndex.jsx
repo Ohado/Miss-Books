@@ -7,26 +7,26 @@ import { CollapsedEl } from "../cmps/CollapsedEl.jsx"
 
 export function BookIndex() {
     const [books, setBooks] = useState([])
-    const [filter, setFilter] = useState(bookService.getDefaultFilter())
+    const [filterBy, setFilterBy] = useState(bookService.getDefaultFilter())
 
     useEffect(() => {
         loadBooks()
-    }, [filter])
+    }, [filterBy])
 
     function loadBooks() {
-        bookService.query(filter).then(setBooks)
+        bookService.query(filterBy).then(setBooks)
     }
 
     function onSetFilter(newFilter) {
-        setFilter(prevFilter => ({...prevFilter, ...newFilter}))
+        setFilterBy(prevFilter => ({...prevFilter, ...newFilter}))
     }
 
     return (
         <section className="book-index">
             <h2 className="title">Your index</h2>
             <CollapsedEl
-                colState={<section className="filter"><h2 >Filter</h2></section>}
-                extState={<BookFilter defaultFilter={filter} onSetFilter={onSetFilter}/>} />
+                colHeader={<h2>Filter</h2>}
+                extState={<BookFilter defaultFilter={filterBy} onSetFilter={onSetFilter}/>} />
             <button><Link to={`/book/edit`}>Add Book</Link></button>
             <BookList books={books}/>
        </section>
