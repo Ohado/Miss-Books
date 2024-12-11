@@ -24,11 +24,11 @@ export function BookIndex() {
     return (
         <section className="book-index">
             <h2 className="title">Your index</h2>
-            <CollapsedEl
-                colHeader={<h2>Filter</h2>}
-                extState={<BookFilter defaultFilter={filterBy} onSetFilter={onSetFilter}/>} />
-            <button><Link to={`/book/edit`}>Add Book</Link></button>
-            <BookList books={books}/>
+            <CollapsedEl className="filter"
+                colHeader="Filter"
+                ExtState={<BookFilter defaultFilter={filterBy} onSetFilter={onSetFilter}/>} />
+            <Link to={`/book/edit`}><button className="add-button">Add Book</button></Link>
+            <BookList books={books} onRefresh={loadBooks}/>
        </section>
     )
 }

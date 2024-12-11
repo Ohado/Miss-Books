@@ -1,0 +1,28 @@
+/* Vars */
+:root {
+    --clr1: rgb(139, 105, 71); /* Warm tan for primary elements */
+    --clr2: rgb(176, 118, 80); /* Terracotta accent color */
+
+    --clr1bg: rgb(219, 189, 148); /* Base background beige */
+    --clr1bg-light: rgb(240, 221, 200); /* Lighter beige for contrast */
+    --clr2bg: rgb(230, 198, 170); /* Soft peach for secondary background */
+    --clr2bg-light: rgb(248, 229, 211); /* Cream for highlights */
+
+    --gray1: rgb(250, 245, 240); /* Very light cream for text backgrounds */
+    --gray2: rgb(190, 170, 160); /* Warm gray for secondary text */
+    --gray3: rgb(100, 80, 70); /* Dark brown-gray for main text */
+}
+
+:root-orig {
+    --clr1: rgb(96, 107, 91);
+    --clr2: rgb(120, 99, 110);
+
+    --clr1bg: rgb(153, 166, 149);
+    --clr1bg-light: rgb(205, 221, 200);
+    --clr2bg: rgb(233, 206, 221);
+    --clr2bg-light: rgb(253, 236, 246);
+
+    --gray1: rgb(240, 240, 240);
+    --gray2: rgb(155, 155, 155);
+    --gray3: rgb(44, 44, 44);
+}

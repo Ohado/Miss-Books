@@ -1,7 +1,7 @@
 import { utilService } from './util.service.js'
 import { storageService } from './async-storage.service.js'
 // import { books } from '../../books.js'
-import { books } from '../../books-better.js'
+import { books } from '../../books_data_best.js'
 
 const MAX_PRICE = 200
 const BOOK_KEY = 'bookDB'
@@ -30,6 +30,20 @@ const smapleBooks = [
     {title: "Akarnae", description: "In this captivating fantasy novel, a young girl discovers she is the heir to a forgotten kingdom, but to claim her throne, she must first navigate deadly trials and face powerful enemies."}
 ]
 
+export const categories = [
+    "Fiction",
+    "Satire",
+    "Science Fiction",
+    "Adventure",
+    "Poetry",
+    "Philosophy",
+    "Inspirational",
+    "Historical Fiction",
+    "Politics",
+    "Self-Help",
+    "Creativity"
+]
+
 _createBooks()
 
 export const bookService = {
@@ -50,12 +64,23 @@ function query(filterBy = {}) {
         .then(books => {
             
             if (filterBy.txt) {
+                console.log('fd');
                 const regExp = new RegExp(filterBy.txt, 'i')
-                books = books.filter(book => regExp.test(book.title))
+                let filterTxtBy = filterBy.filterTxtBy || 'title'
+                if (filterTxtBy == "author"){                    
+                    books = books.filter(book => regExp.test(book.authors.join()));
+                }
+                else{
+                    books = books.filter(book => regExp.test(book[filterTxtBy]))
+                }
+            }
+            
+            if(filterBy.category) {
+                const regExp = new RegExp(filterBy.txt, 'i')
+                books = books.filter(book => regExp.test(book.categories.join()));
             }
 
             if (filterBy.maxPrice) {
-                console.log(books)
                 books = books.filter(book => book.listPrice.amount <= filterBy.maxPrice)
             }
 

@@ -1,25 +1,19 @@
 const { useState, useEffect } = React
 
-export function CollapsedEl({ colHeader, ExtState }) {
+export function CollapsedEl({ className, colHeader, ExtState }) {
     const [isExtended, setIsExtended] = useState(false)
-
-    useEffect(() => {
-        
-    }, [])
 
     function onExtendChange(){
         setIsExtended(!isExtended)
     }
 
     return (
-        <div className="collapsed-el">
-            <div className="collapse-header">
-                <button className="coll-button" onClick={onExtendChange}>
-                    {colHeader}
-                    <span>▼</span>
-                </button>
+        <div className={"collapsed-el " + className}>
+            <div className="collapse-header"  onClick={onExtendChange}>
+                <h2> {colHeader} </h2>
+                <span style={{fontSize: '25px'}}>{isExtended ? '▲' : '▼'}</span>
             </div>
-            {isExtended &&  ExtState
+            {isExtended && ExtState
             }
         </div>
     )

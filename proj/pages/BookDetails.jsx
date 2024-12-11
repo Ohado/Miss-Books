@@ -1,7 +1,10 @@
 const { useState, useEffect } = React
 const { useParams, useNavigate, Link } = ReactRouterDOM
+import { LongTxt } from "../cmps/LongTxt.jsx"
 
 import { bookService } from "../services/book.service.js"
+
+const languageNames = {en: "English", he: "Hebrew", fr: "French", es: "Spanish", ru: "Russian"}
 
 export function BookDetails() {
     const [book, setBook] = useState(null)
@@ -45,19 +48,25 @@ export function BookDetails() {
 
     return (
         <section className="book-details">
-            <h2 className="title">{title}</h2>
-            <hr />
-            <div className="detail-tag">{lengthRating}</div>
-            <div className="detail-tag">{yearRating}</div>
+            <h2>{title}</h2>
+            <h3>{authors}</h3>
             <div className={"price "+ priceRating}>{amount} {currencyCode}</div>
             <hr />
-            {isOnSale ?
-                <div className='sale-banner'>
-                    <img height='22px' src='./assets/img/onSale.png' />
-                </div>  : '' }
-            <img src={book.thumbnail} alt="book cover" />
-            <br />
-            {book.description}
+            <div className="main-content">
+                <div className="data">
+                    <p className="centered"><b>Categories</b>: {categories.join(', ')}</p>
+                    <p className="centered">published {publishedDate}, {pageCount} pages, {languageNames[language] || language}</p>
+                    <br/><br/>
+                    <p className="subtitle">{subtitle}</p>
+                    <br/>
+                    <p className="description"><LongTxt txt={description} /></p>
+                </div>
+                <div className="img">
+                    {isOnSale &&
+                        <div className='sale-banner'>On Sale!</div> }
+                    <img src={thumbnail} alt="book cover" />
+                </div>
+            </div>
             <br />
             <div className="bottom-buttons">
                 <button><Link to={`/book/${book.prevBookId}`}>Previous Book</Link></button>

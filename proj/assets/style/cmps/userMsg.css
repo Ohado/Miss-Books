@@ -1,0 +1,20 @@
+.user-msg {
+    position: fixed;
+    top:5rem;
+    right: 5rem;
+    background-color: var(--clr1bg);
+    border-radius: 15px;
+    border: 1px solid;
+    padding: 10px;
+    min-width: 20rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-msg button {
+    align-self: flex-end;
+}
+
+.user-msg h4 {
+    font-size: x-large;
+}

@@ -4,10 +4,6 @@ const { useState, useEffect } = React
 
 export function BookPreview({ book }) {
 
-    useEffect(() => {
-        
-    }, [])
-
     const { id, title, subtitle, authors, publishedDate, description, 
         pageCount, categories, thumbnail, language, listPrice } = book
     const { amount, currencyCode, isOnSale } = listPrice
@@ -21,8 +17,9 @@ export function BookPreview({ book }) {
             <h4>{authors}</h4>
             <div className={"price "+ priceRating}>{amount} {currencyCode}</div>
             <hr />
+            {isOnSale &&
+                <div className='sale-banner'>On Sale!</div> }
             <img src={thumbnail} alt="book cover" />
-            {subtitle ? <LongTxt txt={subtitle} length={20} > {subtitle} </LongTxt> : ''}
         </article>
     )
 }

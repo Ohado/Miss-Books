@@ -1,0 +1,33 @@
+/* Components */
+.home {
+	font-size: 1em;
+}
+
+.app-header {
+	background-color: var(--clr1);
+	color: var(--clr2bg-light);
+}
+
+.header-container {
+	display: flex;
+	align-items: center;
+	font-size: 20px;
+}
+
+.header-container h1 {
+	flex-grow: 1;
+}
+
+.app-nav {
+	display: flex;
+	gap: 15px;
+}
+
+
+.user-msg {
+	/* position: fixed;
+	top: 0;
+	height: 50%;
+	width: 50%;
+	background-color: brown; */
+}

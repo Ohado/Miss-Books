@@ -1,4 +1,5 @@
 import { bookService } from "../services/book.service.js"
+import { eventBusService, showErrorMsg, showSuccessMsg } from "../services/event-bus.service.js"
 
 const { useState, useEffect } = React
 const { useParams, useNavigate } = ReactRouterDOM
@@ -19,6 +20,7 @@ export function BookEdit() {
         .then(setBook)
         .catch(err => {
             console.log('Problem getting book', err);
+            showErrorMsg("Book failed to load")
         })
 
     }
@@ -26,7 +28,10 @@ export function BookEdit() {
     function onSaveBook(ev) {
         ev.preventDefault()
         bookService.save(book)
-        .then(() => Navigate('/book'))
+        .then(() => {
+            showSuccessMsg("Book succesfully " + (bookId ? "edited" : "added"))
+            Navigate('/book')
+        })
     }
 
     function handleChange({ target }){
@@ -51,7 +56,7 @@ export function BookEdit() {
                 <label htmlFor="title">Book Title</label>
                 <input value={book.title} onChange={handleChange} type="text" name="title" id="title" required />
                 <label htmlFor="author">Book Author</label>
-                <input value={book.authors[0]}  onChange={handleChange} type="text" name="author" id="author" />
+                <input value={book.authors.join(', ')}  onChange={handleChange} type="text" name="author" id="author" />
                 <label htmlFor="publishedDate">Published Year</label>
                 <input value={book.publishedDate}  onChange={handleChange} type="number" name="publishedDate" id="publishedDate" />
                 <label htmlFor="description">Description</label>
