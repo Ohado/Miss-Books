@@ -50,7 +50,7 @@ export function BookEdit() {
     }
 
     return (
-        <section className="car-edit">
+        <section className="book-edit">
             <h2> { bookId ? "Edit" : "Add" } Book </h2>
             <form onSubmit={onSaveBook}>
                 <label htmlFor="title">Book Title</label>

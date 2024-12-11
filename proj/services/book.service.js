@@ -1,7 +1,7 @@
 import { utilService } from './util.service.js'
 import { storageService } from './async-storage.service.js'
 // import { books } from '../../books.js'
-import { books } from '../../books_data_best.js'
+import { books, reviews as dummyReviews } from '../../books_data_generic.js'
 
 const MAX_PRICE = 200
 const BOOK_KEY = 'bookDB'
@@ -53,6 +53,7 @@ export const bookService = {
     save,
     getEmptyBook,
     getDefaultFilter,
+    addReview,
 }
 
 
@@ -64,7 +65,6 @@ function query(filterBy = {}) {
         .then(books => {
             
             if (filterBy.txt) {
-                console.log('fd');
                 const regExp = new RegExp(filterBy.txt, 'i')
                 let filterTxtBy = filterBy.filterTxtBy || 'title'
                 if (filterTxtBy == "author"){                    
@@ -105,12 +105,18 @@ function save(book) {
     }
 }
 
-function getEmptyBook(title = '', authors=[], description = '', publishedDate=0, pageCount=0,thumbnail='', price = 0, currencyCode='', isOnSale=false) {
-    return { title, authors, description, publishedDate, pageCount, thumbnail, listPrice: {amount:price, currencyCode, isOnSale} }
+function getEmptyBook(title = '', authors=[], description = '', publishedDate=0, pageCount=0,thumbnail='', price = 0, currencyCode='', isOnSale=false, reviews=[], categories=[]) {
+    return { title, authors, description, publishedDate, pageCount, thumbnail, listPrice: {amount:price, currencyCode, isOnSale}, reviews: dummyReviews, categories }
 }
 
 function getDefaultFilter(filterBy = { txt: '', maxPrice: MAX_PRICE }) {
     return { txt: filterBy.txt, maxPrice: filterBy.maxPrice }
+}
+
+function addReview(bookId, review) {
+    const book = get(bookId);
+    review.id = utilService.makeId()
+    book.reviews.push(review)
 }
 
 function _setNextPrevBookId(book) {    

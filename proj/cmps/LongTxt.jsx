@@ -8,19 +8,19 @@ export function LongTxt({ txt, length=100 }) {
     }
 
     return (
-        <div className="long-txt">
+        <span className="long-txt">
             {isExtended ?
-                <p>
+                <span>
                     {txt}
                     {' '}<a onClick={onExtendChange}>read less</a>
-                </p>
+                </span>
                 :
-                <p>
+                <span>
                     {txt.substring(0, length)}
                     ...<a onClick={onExtendChange}>read more</a>
-                </p>
+                </span>
             }
-        </div>
+        </span>
     )
 }
 

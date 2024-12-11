@@ -1,8 +1,11 @@
 const { useState, useEffect } = React
 const { useParams, useNavigate, Link } = ReactRouterDOM
 import { LongTxt } from "../cmps/LongTxt.jsx"
+import { CollapsedEl } from "../cmps/CollapsedEl.jsx"
 
 import { bookService } from "../services/book.service.js"
+import { AddReview } from "../cmps/AddReview.jsx"
+import { ReviewList } from "../cmps/ReviewList.jsx"
 
 const languageNames = {en: "English", he: "Hebrew", fr: "French", es: "Spanish", ru: "Russian"}
 
@@ -16,9 +19,7 @@ export function BookDetails() {
     }, [params.bookId])
 
     function loadBook() {
-        console.log('f');
-        console.log(params.bookId);
-        
+        console.log('load')
         bookService.get(params.bookId)
         .then(setBook)
         .catch(err => {console.log("Problem getting book", err)})
@@ -68,6 +69,10 @@ export function BookDetails() {
                 </div>
             </div>
             <br />
+            <CollapsedEl className="add-review-container" colHeader={"Add Review"} 
+                ExtState={<AddReview book={book} onSubmit={loadBook}/>}/>
+            <ReviewList reviews={book.reviews} />
+            
             <div className="bottom-buttons">
                 <button><Link to={`/book/${book.prevBookId}`}>Previous Book</Link></button>
                 <button onClick={onBack}>Back</button>

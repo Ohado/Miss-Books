@@ -7,6 +7,7 @@
     border: 1px solid;
     padding: 10px;
     min-width: 20rem;
+    height: auto;
     display: flex;
     flex-direction: column;
 }

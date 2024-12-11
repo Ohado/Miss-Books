@@ -1,6 +1,6 @@
 const { useState, useEffect } = React
 
-export function CollapsedEl({ className, colHeader, ExtState }) {
+export function CollapsedEl({ className='', colHeader, ExtState }) {
     const [isExtended, setIsExtended] = useState(false)
 
     function onExtendChange(){

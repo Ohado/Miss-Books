@@ -19,7 +19,8 @@ export const books = [
             "amount": 19.99,
             "currencyCode": "USD",
             "isOnSale": true
-        }
+        },
+        "reviews": [ ]
     },
     {
         "id": "2b3c4d5e6f7g",
@@ -42,7 +43,8 @@ export const books = [
             "amount": 14.99,
             "currencyCode": "USD",
             "isOnSale": false
-        }
+        },
+        "reviews": []
     },
     {
         "id": "3x4y5z6",
@@ -65,7 +67,8 @@ export const books = [
             "amount": 13.99,
             "currencyCode": "USD",
             "isOnSale": false
-        }
+        },
+        "reviews": []
     },
     {
         "id": "4x5y6z7",
@@ -88,7 +91,8 @@ export const books = [
             "amount": 14.99,
             "currencyCode": "USD",
             "isOnSale": true
-        }
+        },
+        "reviews": []
     },
     {
         "id": "5x6y7z8",
@@ -111,7 +115,8 @@ export const books = [
             "amount": 15.99,
             "currencyCode": "USD",
             "isOnSale": false
-        }
+        },
+        "reviews": []
     },
     {
         "id": "6x7y8z9",
@@ -134,7 +139,8 @@ export const books = [
             "amount": 16.990000000000002,
             "currencyCode": "USD",
             "isOnSale": true
-        }
+        },
+        "reviews": []
     },
     {
         "id": "7x8y9z10",
@@ -459,3 +465,30 @@ export const books = [
         }
     }
 ]
+
+export const reviews = [
+    {
+      "fullname": "Alice Johnson",
+      "rating": "⭐⭐⭐⭐⭐",
+      "readAt": "2024-11-15",
+      "content": "An absolutely captivating read! The plot twists were unpredictable and kept me on edge."
+    },
+    {
+      "fullname": "Michael Smith",
+      "rating": "⭐⭐⭐⭐",
+      "readAt": "2024-10-22",
+      "content": "A well-written book with engaging characters. The pacing was a bit slow in the middle, but overall enjoyable."
+    },
+    {
+      "fullname": "Sophia Lee",
+      "rating": "⭐⭐⭐",
+      "readAt": "2024-09-10",
+      "content": "Interesting premise but lacked depth in character development. Could have been better executed."
+    },
+    {
+      "fullname": "David Brown",
+      "rating": "⭐⭐⭐⭐⭐",
+      "readAt": "2024-08-30",
+      "content": "One of the best books I've read this year! Highly recommend it to anyone who loves thrillers."
+    }
+  ]

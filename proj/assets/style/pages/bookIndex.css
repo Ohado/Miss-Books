@@ -28,6 +28,8 @@
 
 .book-list li {
 	border-radius: 15px;
+	border: 1px var(--clr2) solid;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	padding-left: 5px;
 	padding-right: 5px;
 	text-align: center;
@@ -41,7 +43,6 @@
 
 /***** book preview *****/
 .book-preview {
-	/* display: grid; */
 	font-size: smaller;
 }
 
@@ -151,9 +152,17 @@
 .book-details .bottom-buttons {
 	display: flex;
 	justify-content: space-around;
+	margin: 20px;
 }
 
 /***** filter ******/
+
+.filter {
+	background-color: var(--clr1bg-light);
+	border-radius: 15px;
+	transition: all 0.5s;
+	padding-inline: 30px;
+}
 
 .filter form {
 	display: flex;
@@ -180,9 +189,10 @@
 	background-color: var(--clr1bg);
 }
 
-/****** Car Edit ******/
-.car-edit form{
+/****** Book Edit ******/
+.book-edit form{
 	display: flex;
+	max-width: 20rem;
 	flex-direction: column;
 	gap: 5px;
 }
@@ -196,16 +206,17 @@
 
 
 .collapsed-el {
-	background-color: var(--clr1bg-light);
-	border-radius: 15px;
-	cursor: pointer;
-	padding-inline: 30px;
+	/* background-color: var(--clr1bg-light); */
+	/* border-radius: 15px; */
+	transition: all 0.5s;
+	/* padding-inline: 30px; */
 }
 
 .collapse-header {
+	cursor: pointer;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 }
 
 .collapse-header h2 {

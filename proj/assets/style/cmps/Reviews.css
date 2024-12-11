@@ -1,0 +1,54 @@
+.add-review-container {
+    border-radius: 15px;
+	border: 1px var(--clr2) solid;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	padding: 5px;
+	background-color: var(--clr1bg);
+	transition: all 0.5s;
+}
+
+.add-review form{
+    margin-top: 10px;
+	display: grid;
+    grid-template-areas: 
+    "nt ni rt ri"
+    "ct ct ct ct"
+    "ci ci ci ci"
+    "ci ci ci ci"
+    "b  b  b  b";
+    gap: 10px;
+    justify-content: center;
+}
+
+.add-review .name.title {
+    grid-area: nt;
+}
+.add-review .name.input {
+    grid-area: ni;
+    margin-right: 20px;
+}
+.add-review .rating.title {
+    grid-area: rt;
+}
+.add-review .rating.input {
+    grid-area: ri;
+}
+.add-review .content.title {
+    grid-area: ct;
+}
+.add-review .content.input {
+    grid-area: ci;
+    min-height: 3.5rem;
+}
+.add-review button {
+    grid-area: b;
+}
+
+.review-list {
+}
+
+.review-list li {
+    list-style-type: none;
+    margin: 10px;
+    min-width: 500px;
+}

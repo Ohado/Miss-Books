@@ -27,7 +27,7 @@ export function BookIndex() {
             <CollapsedEl className="filter"
                 colHeader="Filter"
                 ExtState={<BookFilter defaultFilter={filterBy} onSetFilter={onSetFilter}/>} />
-            <Link to={`/book/edit`}><button className="add-button">Add Book</button></Link>
+            <button className="add-button"><Link to={`/book/edit`}><div>Add Book</div></Link></button>
             <BookList books={books} onRefresh={loadBooks}/>
        </section>
     )
