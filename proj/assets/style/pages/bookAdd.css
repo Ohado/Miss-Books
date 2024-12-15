@@ -1,0 +1,20 @@
+.book-add .book-preview {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: minmax(250px, 400px) auto;
+    grid-template-rows: 4.5rem;
+    margin-inline: 100px;
+}
+
+.book-add li {
+    grid-column: 1;
+    list-style-type: none;
+    text-indent: 0;
+    margin: 15px;
+}
+
+.book-add button {
+    grid-column: 2;
+    width: 3rem;
+    height: 3rem;
+}

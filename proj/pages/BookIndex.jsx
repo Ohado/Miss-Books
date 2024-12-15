@@ -27,18 +27,11 @@ export function BookIndex() {
             <CollapsedEl className="filter"
                 colHeader="Filter"
                 ExtState={<BookFilter defaultFilter={filterBy} onSetFilter={onSetFilter}/>} />
-            <button className="add-button"><Link to={`/book/edit`}><div>Add Book</div></Link></button>
+            <div className="buttons">
+                <button className="add-button"><Link to={`/book/edit`}><div>Add Personal Book</div></Link></button>
+                <button className="add-button"><Link to={`/book/add`}><div>Find More Books</div></Link></button>
+            </div>
             <BookList books={books} onRefresh={loadBooks}/>
        </section>
     )
 }
-
-/* 
-Bonuses todo:
-1. <BookEdit> - allow the user to add books using a form.
-Start with a simple form which has inputs for a title and a price and hard
-code the rest of the data.
-2. Refactor the <BookFilter> component to add more filtering options.
-4. More edit options
-4. More information shown in both list and details
-*/

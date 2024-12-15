@@ -22,6 +22,7 @@ export function UserMsg() {
         setMsg(null)
     }
     if (!msg) return null
+    console.log('type' + msg.type)
     return (
         <section className={`user-msg ${msg.type}`}>
             <h4>{msg.txt}</h4>

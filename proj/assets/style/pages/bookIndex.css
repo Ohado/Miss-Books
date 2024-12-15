@@ -6,10 +6,17 @@
 	grid-template-rows: repeat(4, auto);
 }
 
-.book-index button {
-	width: 50%;
+.book-index .buttons{
+	display: flex;
+	gap: 15px;
+	justify-content: space-evenly;
+}
+
+.add-button {
+	min-width: 300px;
 	align-self: center;
 }
+
 
 /***** book list *****/
 .book-list {

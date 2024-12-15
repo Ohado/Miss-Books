@@ -1,11 +1,10 @@
 import { utilService } from './util.service.js'
 import { storageService } from './async-storage.service.js'
 // import { books } from '../../books.js'
-import { books, reviews as dummyReviews } from '../../books_data_generic.js'
+import { books as jsonBooks, reviews as dummyReviews } from '../../books_data_generic.js'
 
 const MAX_PRICE = 200
 const BOOK_KEY = 'bookDB'
-const jsonBooks = books
 const smapleBooks = [
     {},
     {title: "Gwent", description: "A thrilling dive into the world of competitive card games, where strategy, deception, and luck collide in the high-stakes tournaments of a post-apocalyptic future."},
@@ -54,6 +53,7 @@ export const bookService = {
     getEmptyBook,
     getDefaultFilter,
     addReview,
+    addGoogleBook,
 }
 
 
@@ -117,6 +117,18 @@ function addReview(bookId, review) {
     const book = get(bookId);
     review.id = utilService.makeId()
     book.reviews.push(review)
+}
+
+function addGoogleBook(item) {
+    return query({ txt: item.title })
+    .then(filtered => {
+        console.log(filtered);
+        if (filtered.length > 0) {
+            throw new Error('Book already exists')
+        }
+        const newBook = getEmptyBook(item.title)
+        return save(newBook)
+    })
 }
 
 function _setNextPrevBookId(book) {    

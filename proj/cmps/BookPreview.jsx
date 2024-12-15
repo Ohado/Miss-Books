@@ -14,7 +14,7 @@ export function BookPreview({ book }) {
     return (
         <article className="book-preview">
             <h3>{title}</h3>
-            <h4>{authors}</h4>
+            <h4>{authors.join(', ')}</h4>
             <div className={"price "+ priceRating}>{amount} {currencyCode}</div>
             <hr />
             {isOnSale &&

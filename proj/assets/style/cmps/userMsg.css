@@ -19,3 +19,11 @@
 .user-msg h4 {
     font-size: x-large;
 }
+
+.user-msg.success {
+    background-color: #c0db94;
+}
+
+.user-msg.error {
+    background-color: #db9b94;
+}
