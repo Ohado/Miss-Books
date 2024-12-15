@@ -13,7 +13,7 @@ export const books = [
             "Fiction",
             "Science Fiction"
         ],
-        "thumbnail": "assets/img/booksimages/1.jpg",
+        "thumbnail": "assets/img/BooksImages/1.jpg",
         "language": "en",
         "listPrice": {
             "amount": 19.99,
@@ -37,7 +37,7 @@ export const books = [
             "Fiction",
             "Drama"
         ],
-        "thumbnail": "assets/img/booksimages/2.jpg",
+        "thumbnail": "assets/img/BooksImages/2.jpg",
         "language": "en",
         "listPrice": {
             "amount": 14.99,
@@ -61,7 +61,7 @@ export const books = [
             "Category A",
             "Category B"
         ],
-        "thumbnail": "assets/img/booksimages/3.jpg",
+        "thumbnail": "assets/img/BooksImages/3.jpg",
         "language": "en",
         "listPrice": {
             "amount": 13.99,
@@ -85,7 +85,7 @@ export const books = [
             "Category A",
             "Category B"
         ],
-        "thumbnail": "assets/img/booksimages/4.jpg",
+        "thumbnail": "assets/img/BooksImages/4.jpg",
         "language": "en",
         "listPrice": {
             "amount": 14.99,
@@ -109,7 +109,7 @@ export const books = [
             "Category A",
             "Category B"
         ],
-        "thumbnail": "assets/img/booksimages/5.jpg",
+        "thumbnail": "assets/img/BooksImages/5.jpg",
         "language": "en",
         "listPrice": {
             "amount": 15.99,
@@ -133,7 +133,7 @@ export const books = [
             "Category A",
             "Category B"
         ],
-        "thumbnail": "assets/img/booksimages/6.jpg",
+        "thumbnail": "assets/img/BooksImages/6.jpg",
         "language": "en",
         "listPrice": {
             "amount": 16.990000000000002,
@@ -157,7 +157,7 @@ export const books = [
             "Category A",
             "Category B"
         ],
-        "thumbnail": "assets/img/booksimages/7.jpg",
+        "thumbnail": "assets/img/BooksImages/7.jpg",
         "language": "en",
         "listPrice": {
             "amount": 17.990000000000002,
@@ -180,7 +180,7 @@ export const books = [
             "Category A",
             "Category B"
         ],
-        "thumbnail": "assets/img/booksimages/8.jpg",
+        "thumbnail": "assets/img/BooksImages/8.jpg",
         "language": "en",
         "listPrice": {
             "amount": 18.990000000000002,
@@ -203,7 +203,7 @@ export const books = [
             "Category A",
             "Category B"
         ],
-        "thumbnail": "assets/img/booksimages/9.jpg",
+        "thumbnail": "assets/img/BooksImages/9.jpg",
         "language": "en",
         "listPrice": {
             "amount": 19.990000000000002,
@@ -226,7 +226,7 @@ export const books = [
             "Category A",
             "Category B"
         ],
-        "thumbnail": "assets/img/booksimages/10.jpg",
+        "thumbnail": "assets/img/BooksImages/10.jpg",
         "language": "en",
         "listPrice": {
             "amount": 20.990000000000002,
@@ -249,7 +249,7 @@ export const books = [
             "Category A",
             "Category B"
         ],
-        "thumbnail": "assets/img/booksimages/11.jpg",
+        "thumbnail": "assets/img/BooksImages/11.jpg",
         "language": "en",
         "listPrice": {
             "amount": 21.990000000000002,
@@ -272,7 +272,7 @@ export const books = [
             "Category A",
             "Category B"
         ],
-        "thumbnail": "assets/img/booksimages/12.jpg",
+        "thumbnail": "assets/img/BooksImages/12.jpg",
         "language": "en",
         "listPrice": {
             "amount": 22.990000000000002,
@@ -295,7 +295,7 @@ export const books = [
             "Category A",
             "Category B"
         ],
-        "thumbnail": "assets/img/booksimages/13.jpg",
+        "thumbnail": "assets/img/BooksImages/13.jpg",
         "language": "en",
         "listPrice": {
             "amount": 23.990000000000002,
@@ -318,7 +318,7 @@ export const books = [
             "Category A",
             "Category B"
         ],
-        "thumbnail": "assets/img/booksimages/14.jpg",
+        "thumbnail": "assets/img/BooksImages/14.jpg",
         "language": "en",
         "listPrice": {
             "amount": 24.990000000000002,
@@ -341,7 +341,7 @@ export const books = [
             "Category A",
             "Category B"
         ],
-        "thumbnail": "assets/img/booksimages/15.jpg",
+        "thumbnail": "assets/img/BooksImages/15.jpg",
         "language": "en",
         "listPrice": {
             "amount": 25.990000000000002,
@@ -364,7 +364,7 @@ export const books = [
             "Category A",
             "Category B"
         ],
-        "thumbnail": "assets/img/booksimages/16.jpg",
+        "thumbnail": "assets/img/BooksImages/16.jpg",
         "language": "en",
         "listPrice": {
             "amount": 26.990000000000002,
@@ -387,7 +387,7 @@ export const books = [
             "Category A",
             "Category B"
         ],
-        "thumbnail": "assets/img/booksimages/17.jpg",
+        "thumbnail": "assets/img/BooksImages/17.jpg",
         "language": "en",
         "listPrice": {
             "amount": 27.990000000000002,
@@ -410,7 +410,7 @@ export const books = [
             "Category A",
             "Category B"
         ],
-        "thumbnail": "assets/img/booksimages/18.jpg",
+        "thumbnail": "assets/img/BooksImages/18.jpg",
         "language": "en",
         "listPrice": {
             "amount": 28.990000000000002,
@@ -433,7 +433,7 @@ export const books = [
             "Category A",
             "Category B"
         ],
-        "thumbnail": "assets/img/booksimages/19.jpg",
+        "thumbnail": "assets/img/BooksImages/19.jpg",
         "language": "en",
         "listPrice": {
             "amount": 29.990000000000002,
@@ -456,7 +456,7 @@ export const books = [
             "Category A",
             "Category B"
         ],
-        "thumbnail": "assets/img/booksimages/20.jpg",
+        "thumbnail": "assets/img/BooksImages/20.jpg",
         "language": "en",
         "listPrice": {
             "amount": 30.990000000000002,
