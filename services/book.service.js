@@ -1,7 +1,7 @@
 import { utilService } from './util.service.js'
 import { storageService } from './async-storage.service.js'
 // import { books } from '../../books.js'
-import { books as jsonBooks, reviews as dummyReviews } from '../../books_data_generic.js'
+import { books as jsonBooks, reviews as dummyReviews } from '../assets/lists/books_data_generic.js'
 
 const MAX_PRICE = 200
 const BOOK_KEY = 'bookDB'
