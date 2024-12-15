@@ -18,7 +18,7 @@ export function RootCmp() {
                 <AppHeader />
                 <main>
                     <Routes>
-                        <Route path="/" element={<Navigate to="/book" />}></Route>
+                        <Route path="/" element={<Navigate to="/home" />}></Route>
                         <Route path="/home" element={<HomePage />}></Route>
                         <Route path="/about" element={<AboutUs />}></Route>
                         <Route path="/book" element={<BookIndex />}></Route>
